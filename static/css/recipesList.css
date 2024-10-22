@@ -1,0 +1,122 @@
+.recipesList {
+    background-image: url(/static/Backgroundd.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-top: 90px;
+    padding-bottom: 60px;
+}
+
+.recipesList .pageTitle{
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+    color: black;
+    font-size: 35px;
+    position: relative;
+    font-weight: bold;
+    margin-bottom: 70px;
+}
+
+.container{
+    box-sizing: border-box;
+    color: #838383;
+    font-family: "Poppins", sans-serif;
+    font-size: 15px;
+}
+
+.container .row {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 0 -15px;
+    justify-content: space-between;
+}
+
+.container .item {
+    position: relative;
+    flex-basis: calc(33.33% - 30px);
+    margin: 10px;
+    box-sizing: border-box;
+    height: 200px;
+    overflow: hidden;
+}
+
+.container .item img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+.container .infoBackground {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    color: #ffffff;
+    text-align: center;
+}
+
+.container .info {
+    padding: 15px 25px;
+}
+
+.container .h3 {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    unicode-bidi: isolate;
+}
+
+.recipesList .pagination {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 50px;
+}
+
+.recipesList .pagination > * {
+    padding: 12px 15px;
+    margin-right: 10px;
+    background-color: #cccccc;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.recipesList .pagination > *:last-child {
+    margin-right: 0;
+}
+
+.recipesList .pagination > span {
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+}
+
+.recipesList .pagination > a:hover {
+    background-color: black;
+}
+
+@media (max-width: 768px) {
+    .container .item {
+        flex-basis: calc(50% - 30px); /* Make 2 items per row on small screens */
+    }
+}
+
+@media (max-width: 576px) {
+    .container .item {
+        flex-basis: 100%; /* 1 item per row on extra small screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .recipesList .pageTitle {
+        font-size: 28px;
+        margin-bottom: 40px;
+    }
+}
+

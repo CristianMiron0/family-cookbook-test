@@ -1,0 +1,238 @@
+body {
+    font-family: "Poppins", sans-serif;
+    background:url(/static/Backgroundd.png) no-repeat center center;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20vh;
+}
+
+.heading {
+    font-size: 3rem;
+    color: #333;
+    margin: 0;
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+
+.col-12.col-lg-5 {
+    flex: 0 0 40%;
+    max-width: 45%;
+    background-color: #f0f5fa;
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.col-12.col-lg-5:hover {
+    transform: translateY(-5px);
+}
+
+.col-12.col-lg-7 {
+    flex: 0 0 70%;
+    max-width: 60%;
+    padding-left: 50px;
+}
+
+.summary {
+    text-align: center;
+    background-color: #000;
+    color: white;
+    padding: 15px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+h2.title {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+ul.check-box-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li.check-box-item {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.form-group {
+    display: flex;
+    align-items: center;
+}
+
+.steps-list {
+    background-color: #f0f5fa; /* Same background as ingredients */
+    padding: 35px; /* Similar padding */
+    border-radius: 12px; /* Border-radius for a smooth look */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Same shadow */
+    transition: transform 0.2s;
+}
+
+.steps-list:hover {
+    transform: translateY(-5px); /* Similar hover effect */
+}
+
+
+.check-box-item,
+.step-item {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: flex-start;
+}
+
+input[type="checkbox"] {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    position: relative;
+    cursor: pointer;
+    transition: border-color 0.2s;
+    flex-shrink: 0;
+}
+
+input[type="checkbox"]:checked {
+    background-color: black;
+    border-color: black;
+}
+
+input[type="checkbox"]:checked:before {
+    content: "✓";
+    color: white;
+    position: absolute;
+    left: 4px;
+    top: -2px;
+}
+
+input[type="checkbox"]:focus {
+    outline: none;
+    box-shadow: black;
+}
+
+label {
+    font-size: 1.1rem;
+    color: #333;
+    flex-grow: 1;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+.step-item label,
+.check-box-item label {
+    max-width: calc(100% - 30px);
+    overflow-wrap: break-word;
+}
+
+ul.content {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li .item {
+    margin-bottom: 30px;
+}
+
+h2.number {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+p.description {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+.container {
+    padding-bottom: 40px;
+}
+
+.scrollable-list {
+    max-height: 300px;
+    overflow-y: auto;
+    padding-right: 10px;
+    border: none;
+    border-radius: 8px;
+    background-color: #f0f5fa;
+}
+
+.scrollable-list::-webkit-scrollbar {
+    width: 10px;
+}
+
+.scrollable-list::-webkit-scrollbar-track {
+    background: #e1e1e1;
+    border-radius: 10px;
+}
+
+.scrollable-list::-webkit-scrollbar-thumb {
+    background: #a0a0a0;
+    border-radius: 10px;
+}
+
+.scrollable-list-steps {
+    max-height: 450px;
+    overflow-y: auto;
+    padding-right: 10px;
+    border: none;
+    border-radius: 8px;
+    background-color: #f0f5fa;
+}
+
+.scrollable-list-steps::-webkit-scrollbar {
+    width: 10px;
+}
+
+.scrollable-list-steps::-webkit-scrollbar-track {
+    background: #e1e1e1;
+    border-radius: 10px;
+}
+
+.scrollable-list-steps::-webkit-scrollbar-thumb {
+    background: #a0a0a0;
+    border-radius: 10px;
+}
+
+@media (max-width: 992px) {
+    .row {
+        flex-direction: column;
+    }
+
+    .col-12.col-lg-5, .col-12.col-lg-7 {
+        flex: 0 0 100%;
+        max-width: 100%;
+        padding: 0;
+        margin-bottom: 20px;
+    }
+
+    .col-12.col-lg-7 {
+        padding-left: 0;
+    }
+}

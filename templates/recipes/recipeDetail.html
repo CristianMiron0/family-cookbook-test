@@ -1,0 +1,54 @@
+{% extends "recipesDetailsLayout.html" %}
+
+{% block body %}
+    <div class="container">
+        <div>
+            <div>
+                <div class="header">
+                    <h1 class="heading">{{ recipe.name }}</h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12 col-lg-5 order-lg-1">
+                <div class="box">
+                    <div class="summary">
+                        <p>Prep: {{ recipe.prep }}</p>
+                        <p>Cook: {{ recipe.cook }}</p>
+                        <p>Yields: {{ recipe.yields }}</p>
+                    </div>
+                    <h2 class="title">Ingredients</h2>
+                    <form class="check-box">
+                        <div class="scrollable-list">
+                            <ul class="check-box-list">
+                                {% for ingredient in recipe.ingredients %}
+                                <li class="check-box-item">
+                                    <div class="form-group">
+                                        <input type="checkbox" name="checkbox" id="ingredient-{{ loop.index }}">
+                                        <label for="ingredient-{{ loop.index }}" class="square">{{ ingredient }}</label>
+                                    </div>
+                                </li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="col-12 col-lg-7 order-lg-2">
+                <h2 class="title">Steps</h2>
+                <ul class="steps-list">
+                <div class="scrollable-list-steps">
+                    {% for step in recipe.steps %}
+                        <li class="step-item">
+                            <input type="checkbox" id="step-{{ loop.index }}" />
+                            <label for="step-{{ loop.index }}">{{ step }}</label>
+                        </li>
+                    {% endfor %}
+                </div>
+                </ul>
+            </div>
+        </div>
+    </div>
+{% endblock %}

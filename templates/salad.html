@@ -1,0 +1,31 @@
+{% extends "recipesListLayout.html" %}
+
+{% block body %}
+
+    <div class="pageTitle">
+        <h1>Salad</h1>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            {% for recipe in recipes %}
+            <div class="item">
+                <a href="/recipes/{{ recipe.id }}">
+                    <img src="/static/img/{{ recipe.img }}" alt="{{ recipe.name }}">
+                    <div class="infoBackground">
+                        <div class="info">
+                            <h3>{{ recipe.name }}</h3>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <div class="pagination">
+        <span>01</span>
+        <a href="/saladPage2">02</a>
+    </div>
+
+{% endblock %}
